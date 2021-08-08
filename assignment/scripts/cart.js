@@ -4,6 +4,7 @@ console.log('***** Cart Functions *****');
 
 //Create a global variable named `basket` and set it to an empty array.
 
+// emty basket array
 let basket = [];
 
 
@@ -14,6 +15,7 @@ let basket = [];
   //return `true` indicating the item was added
 
   function addItem(item){
+    // adding item to the basket array
     basket.push(item);
     if (basket.includes(item)){
       return true;
@@ -21,7 +23,7 @@ let basket = [];
     else{
       return false;
     }
-  }
+  }end addItem
 
   console.log(addItem('apple'));
   console.log(addItem('mango'));
@@ -38,10 +40,11 @@ let basket = [];
     // console.log each individual item on a new line
 
     function listItems(){
+      // looping over the item in the basket array
       for (let item = 0; item < basket.length; item++){
         console.log(basket[item])
       }
-    }
+    }end listItem
 
     listItems();
 
@@ -50,9 +53,10 @@ let basket = [];
     //   reset the `basket` to an empty array
 
     function empty(){
+      //reseting basket to an empty array
       basket = [];
       return basket;
-    }
+    }//end empty
 
     empty()
 
@@ -71,7 +75,7 @@ let basket = [];
         return true;
       }
       return false;
-    }
+    }//end isFull
 
     console.log(isFull());
 
@@ -84,7 +88,9 @@ let basket = [];
 addItem('kiwi');
 addItem('watermelon');
 addItem('dates');
+
 console.log(basket)
+
 function newAddItem(){
 if (isFull()){
   console.log(`We don't have an availability in the room`)
@@ -92,9 +98,10 @@ if (isFull()){
 }
 console.log(`We have an availability in the room`)
 return false;
-}
+}//end newAddItem
 
 console.log(newAddItem())
+
     // Create a function called `removeItem`. It should:
     //   Take an input parameter for a string `item`
     //   Use [Array.indexOf] to find the index of the first matching item in the basket.
@@ -106,6 +113,6 @@ function removeItem(item){
   let index = basket.indexOf(item);
   basket.splice(index, 2)
   return basket;
-}
+}//end removeItem
 
 console.log(removeItem('kiwi'))
