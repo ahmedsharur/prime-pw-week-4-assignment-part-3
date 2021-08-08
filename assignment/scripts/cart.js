@@ -23,7 +23,7 @@ let basket = [];
     else{
       return false;
     }
-  }end addItem
+  }//end addItem
 
   console.log(addItem('apple'));
   console.log(addItem('mango'));
@@ -44,7 +44,7 @@ let basket = [];
       for (let item = 0; item < basket.length; item++){
         console.log(basket[item])
       }
-    }end listItem
+    }//end listItem
 
     listItems();
 
